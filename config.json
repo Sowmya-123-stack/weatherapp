@@ -1,0 +1,29 @@
+{
+  "apiConfig": {
+    "description": "OpenWeatherMap API Configuration",
+    "apiKey": "REPLACE_WITH_YOUR_API_KEY",
+    "apiUrl": "https://api.openweathermap.org",
+    "getCurrentAPIKey": "Get your free API key at: https://openweathermap.org/api",
+    "setupSteps": [
+      "1. Go to https://openweathermap.org/api",
+      "2. Sign up for a free account",
+      "3. Navigate to your API keys section",
+      "4. Copy your API key",
+      "5. Open weather-app.js and replace the API_KEY constant with your key"
+    ]
+  },
+  "appSettings": {
+    "temperatureUnit": "metric",
+    "forecastDays": 5,
+    "refreshInterval": 300000,
+    "geolocationTimeout": 10000
+  },
+  "features": {
+    "currentWeather": true,
+    "fiveDayForecast": true,
+    "airQuality": true,
+    "geolocation": true,
+    "citySearch": true,
+    "dynamicBackground": true
+  }
+}

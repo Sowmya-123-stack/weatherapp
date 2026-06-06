@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Background Animation -->
+        <div class="background" id="background"></div>
+        
+        <!-- Loading Screen -->
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p>Getting your location...</p>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content" id="content" style="display: none;">
+            <!-- Header -->
+            <header class="header">
+                <div class="search-container">
+                    <input 
+                        type="text" 
+                        id="searchInput" 
+                        placeholder="Search city..." 
+                        class="search-input"
+                    >
+                    <button id="searchBtn" class="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <button class="location-btn" id="locationBtn" title="Get current location">
+                    <i class="fas fa-map-marker-alt"></i>
+                </button>
+            </header>
+
+            <!-- Current Weather -->
+            <section class="current-weather">
+                <div class="weather-main">
+                    <div class="location-info">
+                        <h2 id="cityName">Loading...</h2>
+                        <p id="weatherDescription">Loading...</p>
+                    </div>
+                    <div class="temperature-display">
+                        <span id="temperature">--</span>
+                        <span class="unit">°C</span>
+                    </div>
+                    <div class="weather-icon">
+                        <i id="weatherIcon" class="fas fa-cloud"></i>
+                    </div>
+                </div>
+
+                <!-- Weather Details Grid -->
+                <div class="weather-details-grid">
+                    <div class="detail-card">
+                        <div class="detail-icon">
+                            <i class="fas fa-droplets"></i>
+                        </div>
+                        <div class="detail-info">
+                            <span class="detail-label">Humidity</span>
+                            <span id="humidity" class="detail-value">--</span>
+                        </div>
+                    </div>
+
+                    <div class="detail-card">
+                        <div class="detail-icon">
+                            <i class="fas fa-wind"></i>
+                        </div>
+                        <div class="detail-info">
+                            <span class="detail-label">Wind Speed</span>
+                            <span id="windSpeed" class="detail-value">--</span>
+                        </div>
+                    </div>
+
+                    <div class="detail-card">
+                        <div class="detail-icon">
+                            <i class="fas fa-gauge"></i>
+                        </div>
+                        <div class="detail-info">
+                            <span class="detail-label">Pressure</span>
+                            <span id="pressure" class="detail-value">--</span>
+                        </div>
+                    </div>
+
+                    <div class="detail-card">
+                        <div class="detail-icon">
+                            <i class="fas fa-smog"></i>
+                        </div>
+                        <div class="detail-info">
+                            <span class="detail-label">Air Quality</span>
+                            <span id="airQuality" class="detail-value">--</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5-Day Forecast -->
+            <section class="forecast-section">
+                <h3 class="section-title">5-Day Forecast</h3>
+                <div class="forecast-grid" id="forecastGrid">
+                    <!-- Forecast cards will be inserted here -->
+                </div>
+            </section>
+
+            <!-- Air Quality Details -->
+            <section class="air-quality-section">
+                <h3 class="section-title">Air Quality Details</h3>
+                <div class="air-quality-grid" id="airQualityGrid">
+                    <!-- Air quality details will be inserted here -->
+                </div>
+            </section>
+        </div>
+
+        <!-- Error Message -->
+        <div class="error-message" id="errorMessage" style="display: none;">
+            <i class="fas fa-exclamation-circle"></i>
+            <p id="errorText"></p>
+        </div>
+    </div>
+
+    <script src="weather-app.js"></script>
+</body>
+</html>
