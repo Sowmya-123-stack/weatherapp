@@ -1,4 +1,4 @@
-// OpenWeatherMap API Keys and Configuration
+/// OpenWeatherMap API Keys and Configuration
 const API_KEY = '0e0e28bfcea224d2da51cb465b2d7b80';
 const USE_DUMMY_API = true; // Set to true to use dummy/mock API
 const USE_DEMO_MODE = false;
@@ -41,6 +41,8 @@ const weatherIconMap = {
     '50d': 'fas fa-smog',
     '50n': 'fas fa-smog'
 };
+
+
 
 // Weather Background Map
 const weatherBackgroundMap = {
